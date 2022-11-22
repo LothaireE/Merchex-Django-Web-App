@@ -1,0 +1,23 @@
+html {
+    margin: auto 2rem;
+}
+
+body {
+    border-left: solid 3px lightgray;
+    border-right: solid 3px lightgray;
+    padding: 0 0.5rem;
+}
+a {
+    text-decoration: none;
+}
+h1 {
+    font-weight: 700;
+
+}
+.errorlist { margin-bottom: -10px ;}
+
+#title {
+    text-decoration: none;
+    color: tomato;
+}
+

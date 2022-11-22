@@ -1,0 +1,20 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+<h2>{{ offer.title }}</h2>
+
+ <p>Type : {{ offer.get_offer_type_display }} de {{ offer.year }}</p>
+<ul>
+ <li>Genre : {{ offer.description }}</li>
+
+ {% if offer.band %}
+ <li>
+    Cet article est rattaché à :
+        {{ offer.band }}    
+</li>
+{% endif %}
+</ul>
+
+<span><a  href="{% url 'offer-update' offer.id %}">Modifier</a> / <a  href="{% url 'offer-remove' offer.id %}">Supprimer</a> /<a  href="{% url 'offer-list' %}">Retour aux offres</a></span>
+
+{% endblock %}

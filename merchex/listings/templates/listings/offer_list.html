@@ -1,0 +1,24 @@
+
+
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+        <h2>ma page d'offre</h2>
+        <a href="{% url 'offer-add' %}">Ajouter une offre</a>
+
+        <p>J'ai {{ offers|length }} offres.</p>
+
+        
+        <ul>
+            {% for offer in offers %}
+        <li>
+                <a href="{% url 'offer-detail' offer.id %}">
+                     {{ offer.title }}   
+                </a> / <a  href="{% url 'offer-update' offer.id %}">Modifier</a>
+        </li>
+        {% endfor %}     
+        </ul>
+       
+
+{% endblock %}
